@@ -1,0 +1,39 @@
+.header{
+    position: fixed;
+    width: 100%;
+    display: flex;
+    z-index: 2;
+    align-items: center;
+    justify-content: space-between;
+    background: rgb(17, 17, 17);
+    height: 75px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.header img{
+    margin-left: 5%;
+    height: 150px;
+    width: 150px;
+}
+nav{
+    margin-right: 5%;
+}
+.header a{
+    text-decoration: none;
+    color: #fff;
+    font-size: 18px;
+    padding:0 25px;
+    position: relative;
+}
+small{
+   width:0%;
+   position: absolute;
+   height: 2px;
+   margin: auto;
+   left: 10%;
+   bottom: 0;
+   background: tomato;
+   transition: .5s;
+}
+.header a:hover small{
+    width: 80%;
+}

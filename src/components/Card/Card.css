@@ -1,0 +1,79 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.card{
+    position: relative;
+    margin-bottom: 10px;
+    background: #fff;
+    border-radius: 5px;
+}
+.card:hover{
+    box-shadow: rgba(9, 30, 66, 0.25) 0px 4px 8px -2px, rgba(9, 30, 66, 0.08) 0px 0px 0px 1px;
+}
+.card img{
+    width: 100%;
+    padding-bottom: 2px;
+    border-radius: 5px;
+}
+.card p{
+    color: rgb(148, 147, 147);
+    padding-left: 5px;
+    font-size: 16px;
+    font-weight: bolder;
+    display: flex;
+}
+hr{
+    background: rgb(226, 223, 223);
+    width: 95%;
+    margin: 18px 2.5%;
+    margin-bottom: 5px;
+}
+i{
+    color: rgb(228, 112, 58);
+    padding-left: 5px;
+}
+.heilight{
+    color: rgb(100, 99, 99);
+}
+.product-info{
+    padding: 5px;
+    padding-top: 0;
+    margin-bottom: 40px;
+}
+.product-info h4{
+    color: rgb(12, 12, 12);
+    padding-bottom: 20px;
+}
+.product-info p{
+     padding: 5px 1px;
+     margin: 2px 0;
+     color: rgb(100, 99, 99);
+     font-size: 13px;
+     font-family: sans-serif;
+}
+.nth{
+    background: rgb(246, 245, 245);
+}
+.add-btn{
+    width: 100%;
+    text-decoration: none;
+    position: absolute;
+    bottom: 0;
+    text-align: center;
+    color: #fff;
+    background: tomato;
+    font-size: 20px;
+    padding: 5px;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    cursor: pointer;
+}
+
+@media screen and (max-width:650px) {
+    .card{
+        width: 100%;
+        margin: auto;
+    }
+}
