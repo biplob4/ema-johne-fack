@@ -5,7 +5,7 @@ import Sope from './components/Shope/Sope';
 function App() {
   return (
     <div>
-        <Header></Header>
+        <Header> </Header>
         <Sope> </Sope>
     </div>
   );
