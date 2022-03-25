@@ -6,9 +6,9 @@ const addToDb = id => {
        getCard = JSON.parse(storedCart);
     }
     
-    const quatity = getCard[id];
-    if(quatity){
-        const newquantity = quatity + 1;
+    const quantity = getCard[id];
+    if(quantity){
+        const newquantity = quantity + 1;
         getCard[id] = newquantity
     }
         else{

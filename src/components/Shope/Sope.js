@@ -9,6 +9,20 @@ const Sope = () => {
     const [products, setProducts] = useState([]);
     const [cart, setCard] = useState([]);
 
+    useEffect(() => {
+        let getStorCard = storCard();
+        const saveCard = [];
+        for (const id in getStorCard) {
+            const addedCard = products.find(product => product.id === id);
+            if (addedCard) {
+                const quantity = getStorCard[id];
+                addedCard.quantity = quantity;
+                saveCard.push(addedCard)
+            }
+        }
+        setCard(saveCard)
+    }, [products])
+
     const addToCard = (selectedProduct) => {
         let newCart = [];
         const exists = cart.find(product => selectedProduct.id === product.id);
@@ -24,20 +38,6 @@ const Sope = () => {
         setCard(newCart)
         addToDb(selectedProduct.id)
     }
-
-    useEffect(() => {
-        let getStorCard = storCard();
-        const saveCard = [];
-        for (const id in getStorCard) {
-            const addedCard = products.find(product => product.id === id);
-            if (addedCard) {
-                const quantity = getStorCard[id];
-                addedCard.quantity = quantity;
-                saveCard.push(addedCard)
-            }
-        }
-        setCard(saveCard)
-    }, [products])
 
 
     useEffect(() => {
