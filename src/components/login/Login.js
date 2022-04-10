@@ -25,7 +25,7 @@ const Login = () => {
         setPassword(event.target.value);
     }
 
-    const handleCreateUser = event => {
+    const handleCreateUser = event => {    
         event.preventDefault();
         signInWithEmailAndPassword(email, password);
         // if (user) {
