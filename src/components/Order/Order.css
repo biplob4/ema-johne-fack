@@ -1,0 +1,12 @@
+.order-container{
+    margin-top: 150px;
+    margin-left: 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    padding:2%;
+    background: lightgray;
+    border-radius: 10px;
+}
+

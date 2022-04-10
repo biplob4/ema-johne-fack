@@ -77,3 +77,13 @@ i{
         margin: auto;
     }
 }
+button{
+    padding: 15px 30px;
+    background: tomato;
+    border: none;
+    border-radius: 5px;
+    font-size: 20px;
+    cursor: pointer;
+    color: #fff;
+    margin:20px 0;
+  }

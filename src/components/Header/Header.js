@@ -1,20 +1,27 @@
 import React from 'react';
 import logo from '../../images/Logo.svg'
+import { signOut } from 'firebase/auth';
+import  auth  from '../../firebase.init';
 import './Header.css'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faBars } from '@fortawesome/free-solid-svg-icons';
+import { Link } from 'react-router-dom';
+import { useAuthState } from 'react-firebase-hooks/auth';
 
 const Header = () => {
+    const [user, loading, error] = useAuthState(auth);
     return (
-        <div className='header'>
-            <img src={logo} alt="" srcset="" />
-            <nav>
-                <a href="/Home">Home <small></small></a>
-                <a href="/Shope">Shope <small></small></a>
-                <a href="/Card">Card <small></small></a>
-                <a href="/Product">Product <small></small></a>
-                <a href="Contuct">Contuct <small></small></a>
-            </nav>
+        <div className='header-container'>
+            <div className='header'>
+                <img src={logo} alt="" srcset="" />
+                <nav>
+                    <Link to="/home">Home <small></small></Link>
+                    <Link to="/shop">Shope <small></small></Link>
+                    <Link to="/inventory">Inventory <small></small></Link>
+                    <Link to="/order">Order <small></small></Link>
+                    <Link to="contuct">Contuct <small></small></Link>
+                   {!user? <Link to="login">Login <small></small> </Link> :
+                    <button onClick={()=>signOut(auth)} style={{padding:"5px 7px",fontSize:"16px",background:"lightGreen"}}>logout</button>}
+                </nav>
+            </div>
         </div>
     );
 };
